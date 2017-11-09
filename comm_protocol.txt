@@ -1,0 +1,43 @@
+1. When client connect to server, it send this message:
+
+{
+	"Domain":"amazon.com"
+}
+
+2. Server replies:
+
+{
+	"Text": "Hello! Welcome to client service",
+	"Button": ["Products", "General Questions"],
+	"template": [],
+	"Error":"",
+	"Input_status": "Welcome to amazon.com",
+	"client_id": 1
+}
+
+3. Client replies:
+
+{
+	"Text":"Products",
+	"action":"",
+	"userID":1
+}
+
+4. server replies:
+
+{
+	"Text": "Product List", 
+	"Button": ["jeans", "shoes"], 
+	"template": [],
+	"Error":"", 
+	"Input_status": "Status of last input",
+	"client_id": 1
+}
+
+where template contains t1 = 
+
+{
+	"name":"productName"
+	:::::::
+	All details of the product
+}
